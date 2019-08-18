@@ -1,0 +1,8 @@
+CONFIG=/usr/local/etc/wifi/config
+
+SSID=$(cat $CONFIG | grep SSID | sed 's/SSID=//')
+PASS=$(cat $CONFIG | grep PASS | sed 's/PASS=//')
+
+networksetup -setairportpower   en0 off
+networksetup -setairportpower   en0 on
+networksetup -setairportnetwork en0 $SSID $PASS

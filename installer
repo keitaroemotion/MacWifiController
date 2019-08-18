@@ -1,0 +1,3 @@
+cp wifi /usr/local/bin
+mkdir -p /usr/local/etc/wifi
+cp config /usr/local/etc/wifi/
